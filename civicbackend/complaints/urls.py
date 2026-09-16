@@ -26,4 +26,4 @@ urlpatterns = [
     path("heatmap/", views.complaint_heatmap_data),
     path("check-duplicate/", views.check_duplicate_complaint),
 ]
-+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
