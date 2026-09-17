@@ -60,8 +60,8 @@ def create_complaint(request):
     description = request.POST.get("description")
 
     # Handle optional latitude/longitude
-    latitude = request.POST.get("latitude")
-    longitude = request.POST.get("longitude")
+    latitude = request.POST.get("latitude") or None
+    longitude = request.POST.get("longitude") or None
 
     file = request.FILES.get("file")
     if not file:
